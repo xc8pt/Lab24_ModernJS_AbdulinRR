@@ -56,7 +56,7 @@ function printUserOld(user) {
     console.log(`Age: ${user.age}`);
     console.log(`City: ${user.city}`);
 }
-// new 
+// new
 function printUser({ name, age, city }) {
     console.log(`Name: ${name}`);
     console.log(`Age: ${age}`);
@@ -151,7 +151,7 @@ console.log("Остальные числа:", rest);
 */
 
 // 7.5 Практическое задание
-
+/*
 // 1
 const arr1 = [1,2,3];
 const arr2 = [4,5,6];
@@ -176,3 +176,27 @@ const address = {
 }
 const fullInfo = {...student, ...address };
 console.log(fullInfo);
+*/
+
+// Шаг 8. Модули (Import/Export)
+/*
+import {greet, add, PI} from "./utils.js";
+console.log("Модули");
+console.log(greet("Rinat"));
+console.log("5 + 3 = ", add(5,3));
+console.log("Значение PI:", PI);
+
+import { multiply as умножить } from "./utils.js";
+console.log("4 * 7 =", умножить(4,7));
+
+import * as Utils from "./utils.js";
+console.log(Utils.greet("Vali"));
+console.log("Умножение:", Utils.multiply(3,9));
+*/
+
+// 8.5. Практическое задание
+// 4
+import {square, cube, E} from "./math.js";
+console.log(square(5, 2));
+console.log(cube(5));
+console.log(E)
