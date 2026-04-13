@@ -1,3 +1,4 @@
+/*
 /// 6.2. Деструктуризация массивов
 console.log("\n=== Деструктуризация массивов ===");
 const colors = ["red", "green", "blue"];
@@ -9,12 +10,12 @@ console.log(color1, color2);
 const [firstColor, secondColor, thirdColor] = colors;
 console.log(firstColor, secondColor, thirdColor);
 //
-const [primary,  , tertiary] = colors;
+const [primary, , tertiary] = colors;
 console.log(primary, tertiary);
 //
-const [c1, c2, c3, c4  = "yellow"] = colors;
+const [c1, c2, c3, c4 = "yellow"] = colors;
 console.log(c4);
-
+*/
 /// 6.3. Деструктуризация объектов
 /*
 console.log("Деструктуризация объектов");
@@ -67,7 +68,8 @@ console.log();
 printUser(user);
 */
 
-// 6.5. Практическое задание
+/// 6.5. Практическое задание
+/*
 // 1
 console.log("Практическое задание");
 const product = {
@@ -92,3 +94,85 @@ function printProduct({ name, price, category, inStock }) {
 console.log(productName, productPrice, productCategory, productInStock);
 console.log("---");
 printProduct(product);
+*/
+
+/// 7.2. Spread оператор для массивов
+/*
+console.log("Spread для массивов");
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+// Объединение массивов:
+const combined = [...arr1, ...arr2];
+console.log("Обьединённый массив:", combined);
+// Копирование массива:
+const copy = [...arr1];
+console, log("Копия массива:", copy);
+// Добавление элементов:
+const extended = [0, ...arr1, 7, 8];
+console.log("Расширенный массив:", extended);
+*/
+
+// 7.3
+/*
+console.log("Spread для объектов");
+const person = {
+    name: "Rinat",
+    age: 30,
+}
+const address = {
+    city: "Volshsky",
+    street: "Mira",
+}
+const fullInfo = {...person, ...address };
+console.log("Полная информация:", fullInfo);
+
+const personCopy = { ...person };
+console.log("Копия объекта:", personCopy);
+
+const updated = { ...person, age: 31, occupation: "Developer" };
+console.log("Обновлённый объект:", updated);
+*/
+
+// 7.4
+/*
+console.log("Rest оператор");
+
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+console.log("Сумма 1,2,3:", sum(1, 2, 3));
+console.log("Сумма 1,2,3,4,5:", sum(1, 2, 3, 4, 5));
+
+const numbers = [10,20,30,40,50];
+const [first, second, ...rest] = numbers;
+console.log("Первое число:", first);
+console.log("Второе число:", second);
+console.log("Остальные числа:", rest);
+*/
+
+// 7.5 Практическое задание
+
+// 1
+const arr1 = [1,2,3];
+const arr2 = [4,5,6];
+console.log(arr1)
+console.log(arr2)
+// 2
+const fullArr = [...arr1, ...arr2];
+console.log(fullArr)
+// 3
+function findMax(...num) {
+    return num.reduce((total, num) => total = Math.max(num), 0);
+}
+console.log(findMax(1,2,3,4,5))
+// 4
+const student = {
+    name: "Rinat",
+    age: 30,
+}
+const address = {
+    city: "Volshsky",
+    street: "Mira",
+}
+const fullInfo = {...student, ...address };
+console.log(fullInfo);
